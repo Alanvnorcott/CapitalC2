@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<body>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p class="anim-fade-in">Ready to type?</p>
+        <input id="Ready!" type="button" value="Ready!" onclick="displaySentence()" />
+        <p id="sentenceOutput"></p>
+
+
+</div>
+    
+</body>
+
+<script src="~/js/site.js"></script>
