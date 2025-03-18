@@ -1,5 +1,4 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿
 
 // Write your JavaScript code.
 
@@ -29,10 +28,22 @@ function grabRandomFromArray(array) {
     return array[randomIndex];
 }
 function generateSentence() {
-    var sentence = grabRandomFromArray(subjects) + " " +grabRandomFromArray(predicates)
-    return sentence
+    return grabRandomFromArray(subjects) + " " + grabRandomFromArray(predicates);
 }
 
 function displaySentence() {
     document.getElementById("sentenceOutput").innerText = generateSentence();
 }
+
+let timer = false
+document.addEventListener("DOMContentLoaded", function() {
+    let sentenceElement = document.getElementById("sentenceOutput");
+    let readyButton = document.getElementById("Ready!");
+    
+
+    readyButton.addEventListener("click", function() {
+        timer = true;
+        console.log("Timer started:", timer);
+        sentenceElement.style.color = "red"; // Change text color when clicked
+    });
+});
