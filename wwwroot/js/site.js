@@ -35,15 +35,21 @@ function displaySentence() {
     document.getElementById("sentenceOutput").innerText = generateSentence();
 }
 
+
+
 let timer = false
 document.addEventListener("DOMContentLoaded", function() {
     let sentenceElement = document.getElementById("sentenceOutput");
-    let readyButton = document.getElementById("Ready!");
+    let readyButton = document.getElementById("readyButton");
+    
     
 
     readyButton.addEventListener("click", function() {
         timer = true;
         console.log("Timer started:", timer);
         sentenceElement.style.color = "red"; // Change text color when clicked
+        if (timer){
+            document.getElementById("readyButton").style.display = "none";
+        }
     });
 });
